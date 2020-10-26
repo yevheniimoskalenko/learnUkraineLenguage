@@ -1,49 +1,26 @@
-const { model, Schema } = require('mongoose');
+const { model, Schema } = require('mongoose')
 
 const UserSchema = new Schema({
-  email: {
+  name: {
     type: String,
     unique: true,
-    required: true,
+    required: true
   },
   password: {
     type: String,
-    required: true,
+    required: true
   },
-  fb_id: {
-    type: Number,
-  },
-  name: {
+  email: {
     type: String,
-    required: true,
+    required: true
   },
-  picture: {
-    type: String,
-  },
-  address: {
+  points: {
     type: Number,
-    required: true,
-  },
-  phoneNumber: {
-    type: String,
-  },
-  admin: {
-    type: Number,
-    required: true,
-    default: 0,
-  },
-  ticket: {
-    type: Number,
-    required: true,
-    default: 0,
-  },
-  city: {
-    type: String,
-    required: true,
+    default: 0
   },
   date: {
     type: Date,
-    default: Date.now,
-  },
-});
-module.exports = model('user', UserSchema);
+    default: Date.now
+  }
+})
+module.exports = model('user', UserSchema)

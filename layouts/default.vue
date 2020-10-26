@@ -1,22 +1,10 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <el-container>
+    <el-main>
+      <nuxt />
+    </el-main>
+  </el-container>
 </template>
 <script>
-export default {
-  computed: {
-    status() {
-      return this.$store.getters.status
-    }
-  },
-  watch: {
-    status(value) {
-      this.$message({
-        message: `${value.message}`,
-        type: `${value.status}`
-      })
-    }
-  }
-}
+export default {}
 </script>
